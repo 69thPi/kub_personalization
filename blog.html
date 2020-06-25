@@ -1,0 +1,193 @@
+<html>
+<head>
+  <style>
+  .code{
+    background: none repeat scroll 0 0 #2a2a2a;
+    color:#33b3ff ; 
+    padding: 1.3333em;
+    margin: 1.333em 0;
+    border: solid #ff3333;
+    border-width:.1em .1em .1em .8em;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 15px;
+    white-space: pre;
+    word-wrap: normal;
+    overflow-x: auto;
+  }
+  .side{
+    background:#9933ff;
+    width:15%;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+  }
+  .cent{
+    width:70%;
+    /*background:#ff4d79;*/
+    border: 5px dashed black;
+    border-radius: 10px;
+    color: black;
+  }
+  p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align:justify;
+  }
+  </style>
+</head>
+<body style="background:#63e98f;">
+  <h1 align="center"> Personal Documentation </h1>
+  <div style="display:flex;">
+  <div class="side">
+  <p>
+    <caption>For Linux </caption>
+    <ul>
+    <li> <a style="color:white;" href="">Cross-Platform Building - Python</a> </li>
+    <li> <a style="color:white;" href="">Personalization</a> </li>
+    <li> <a style="color:white;" href="">sample</a> </li>
+    <li> <a style="color:white;" href="">sample</a> </li>
+    <li> <a style="color:white;" href="">sample</a> </li>
+    </ul>
+  </p>
+  </div>
+  <div class="cent">
+    <h1 align="center"> Cross-Platform Building for Python files on Linux </h1>
+    <p>
+      ==================================================================<br>
+        python version: python3.6.9<br>
+        pyinstaller versin:<br>
+        linux version:<br>
+        wine version:<br>
+      ==================================================================<br><br>
+
+        To Pack a single independant file that can be executed on either windows/linux
+        for your python script while running a linux OS follow the steps below.<br>
+
+        The computer running the executable does not need to have any version of python
+        installed on it.<br>
+
+        This is facilitated by a python package called "pyinstaller".
+        Let's install that on your Linux OS first.<br>
+      </p>
+    <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> pip3 install pyinstaller</pre>
+      <p>
+        once installed, change current directory to the location of the python file. Here my "__test__.py" file is located in ~/testFolder.<br>
+        and enter the following command to generate the package.
+      </p>
+    <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~/testFolder$</span> pyinstaller --onefile _filename_.py</pre>
+
+    <p>
+       The package is strored in a sub-folder named "dist" with the same name as the file.
+       for linux there is no extension (binary package)
+       for windows the extension is .exe.<br>
+
+       Remember: This only packages a python script and not the dependant files (such as images, fonts, audios, etc)
+       you need to copy them manually into the "dist" folder.
+       click on the executable & viola! It runs...<br><br>
+
+      Say now, that you are using Ubunbtu (and not Windows, for obvious reasons!)
+      and you'd like to run your script on a windows based system then you need to
+      build an .exe file in ubuntu. Pyinstaller does not allow Cross-Platform bulding, so
+      we need to mimic a windows machine on your linux and build the package locally on it.
+      You can do that using "Wine". The recursive backronym for which is "Wine Is Not an Emulator"<br>
+      Hahahah... Pretty smart, right?<br><br>
+
+      It's installation is a bit tricky and the reason for this blog.
+      The official instructions can be found <a href="https://wiki.winehq.org/Download">here</a>.<br>
+      You'll need to know your system specific details such as Ubuntu version and architecture. Mine are shown below<br>
+      The commands for that are:
+    </p>
+
+<pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> lsb_release -a
+<span style="color:#888888;">2</span> Distributor ID: Ubuntu
+<span style="color:#888888;">3</span> Description: Ubuntu 18.04.4 LTS
+<span style="color:#888888;">4</span> Release: 18.04
+<span style="color:#888888;">5</span> Codename: bionic</pre>
+
+<p>
+  and for your system architecture:
+</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg --print-architecture
+<span style="color:#888888;">2</span> amd64</pre>
+
+<p>
+  Most systems these days are 64-bit systems and "wine" is made for 32-bit
+  architectures.<br>
+  If the output is 'amd64' then you have a 64-bit architecture.
+  So, you'll need to enable the 32-bit architecture for your OS.
+  ( Dont worry, you wont lose fucntionality. It'll only add and extra feature.
+  I too was worried and read about it <a href="https://askubuntu.com/questions/446350/what-are-the-biggest-disadvantages-of-using-a-64bit-version-of-linux-over-a-32bi">here</a>.)<br><br>
+  to see the other architectures enabled:
+</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg --print-foreign-architectures
+<span style="color:#888888;">2</span> i386</pre>
+<p>
+
+  If enabled it will give an output (above). <br>
+  Else nothing will be displayed (below).
+</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg --print-foreign-architectures
+<span style="color:#888888;">2</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span></pre>
+<p>
+  To enable multi-arch support:
+</p>
+
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg --add-architecture i386
+<span style="color:#888888;">2</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-get update
+<span style="color:#888888;">3</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-get dist-upgrade</pre>
+<p>
+  This will take time to process.<br>
+  Just put on some music or something...<br><br>
+  Once done open <a href="https://wiki.winehq.org/Ubuntu">official</a> instructions page.
+
+  The latest Wine depends on libfaudio0, that can be found <a href="https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/">here</a>.
+  Ubuntu versions prior to 19.10 don't include it in the standard repositories.
+  It is explained <a href="https://askubuntu.com/questions/1100351/broken-packages-fix-problem-for-wine">here</a>.<br>
+  To download them enter the below lines.
+</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/amd64/libfaudio0_19.07-0~bionic_amd64.deb
+<span style="color:#888888;">2</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/i386/libfaudio0_19.07-0~bionic_i386.deb
+<span style="color:#888888;">3</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg -i libfaudio0_19.07-0~bionic_amd64.deb libfaudio0_19.07-0~bionic_i386.deb</pre>
+<p>Then install the package as shown below</p>
+<pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> wget -nc https://dl.winehq.org/wine-builds/Release.key
+<span style="color:#888888;">2</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-key add Release.key
+<span style="color:#888888;">3</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+<span style="color:#888888;">4</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> apt-get update
+<span style="color:#888888;">5</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-get install --install-recommends winehq-stable</pre>
+<p>You can verify your installation as shown below</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span>cd ~/.wine/drive_c</pre>
+<p>
+   this should install it. if it fails add the key again and repeat the last 3 steps.
+   it worked for me.<br>
+
+   Wine would resemble your generic windows C:/ drive.
+   we have to install python here. Whatever version you want to use.<br>
+
+   There are many methods to do this but the easiest if found was to download
+   the python package for Windows ad copy that onto the virtual wine C:/ drive.
+   ie. copy the python3 folder located likewise C:\python3 to ~/.wine/drive_c/
+   and with that you have a python up and running on your virtual machine.<br>
+ </p>
+   <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span>cd ~/.wine/drive_c/Python36</pre>
+<p>Next, we install pyinstaller for python on that virtual machine.</p>
+   <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~/wine/drive_c/Python36$</span> wine python.exe Scripts/pip.exe install pyinstaller
+<span style="color:#888888;">2</span> Successfully installed pyinstaller-3.1.1 pypiwin32-219</pre>
+<p>
+  <a href="http://sparkandshine.net/en/build-a-windows-executable-from-python-scripts-on-linux/">Here</a> is a similar method used.<br>
+  Your Cross-Platform Builder is now set up.<br>
+
+  To build an .exe file from your Linux OS.
+  Navigate to the folder location of your python script on linux and run the pyinstall command on the wine virtual machine, as shown below.
+</p>
+<pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~/testFolder$</span> wine ~/.wine/drive_c/Python36/Scripts/pyinstaller.exe --onefile _filename_.py</pre>
+<p>
+  and this will generate an .exe file into the "dist" sub-folder.
+  As before, copy all the dependant files into the dist folder and you have an independant distribution package for your script.
+</p>
+  </div>
+  <div class="side">
+  </div>
+</div>
+</body>
+</html>
