@@ -108,8 +108,15 @@ a{
 
 /* for mobile*/
 @media all and (orientation:portrait){
+  body{
+    font-size: 10vh;
+    background-color: dodgerblue;
+  }
 	.note{
-		visibility:hidden;}
+		visibility:hidden;
+    padding:0;
+    margin:0;
+  }
   .tag{
     font-family: 'Amatic SC', cursive;
     font-size:20%;
@@ -117,11 +124,15 @@ a{
     position: absolute;
     bottom:2%;
     right:0%;
-
   }
-  body{
-    font-size: 10vh;
-    background-color: dodgerblue;
+  .vCard{
+    width:90%;
+    height: 50%;
+    float:left;
+  }
+  .ignore1{
+    width:5%;
+    float:left;
   }
 
 }
@@ -136,10 +147,14 @@ a{
   }
   .ignore1{
     width:10%;
+    float:left;
   }
   .note{
-    padding-bottom: 10%;
-    font-size: 80%;
+    font-family: 'Homemade Apple', cursive;
+    font-size:80%;
+    padding: 2% 5% 10%;
+    text-align: left;
+    color:rgb(140,140,160);
   }
   .tag{
     font-family: 'Amatic SC', cursive;
@@ -152,7 +167,7 @@ a{
  }
 @media (min-width:768px) and (max-width:1024px) and (orientation:landscape){
   body {
-    font-size: 9vh;
+    font-size: 5vw;
     background-color: lightgreen;
   }
 
@@ -163,10 +178,15 @@ a{
  }
  .ignore1{
   width:20%;
+  float:left;
  }
  .note{
-  padding-bottom: 5%;
-  font-size: 90%;
+   font-family: 'Homemade Apple', cursive;
+   font-size:90%;
+   padding: 2% 5% 5%;
+   text-align: left;
+   color:rgb(140,140,160);
+
  }
  .tag{
   font-family: 'Amatic SC', cursive;
@@ -206,12 +226,9 @@ a{
   .note{
     font-family: 'Homemade Apple', cursive;
     font-size:70%;
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-bottom: 3%;
+    padding: 2% 5% 3%;
     text-align: left;
     color:rgb(140,140,160);
-    border: 1px solid black;
   }
   .ignore1{
     width: 20%;
@@ -225,7 +242,7 @@ a{
 </head>
 
 <body>
-    <div class="ignore spacing">
+    <div class="ignore0 spacing">
        <p class="note"> For your story to tell,</p>
      </br>
         <div class="ignore1"></br></div>
