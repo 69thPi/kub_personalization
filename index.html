@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" name="viewport" content="width=device-width, intial-scale=1.0">
 <title> Contact Us</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,46 +106,18 @@ a{
   border: 1px solid black;
 }
 
-.vCard{
-  width:60%;
-  height:35%;
-  float:left;
-  min-height:100px;
-  border: 1px solid black;
-}
-.tag{
-  font-family: 'Amatic SC', cursive;
-  font-size:40%;
-  font-weight: bold;
-  position: absolute;
-  bottom:15%;
-  right:-5%;
-  transform:rotate(-90deg);
-  border: 1px solid black;
-}
-
-/* ////////////////////////*/
-.note{
-  font-family: 'Homemade Apple', cursive;
-  font-size:70%;
-  padding-top: 2%;
-  padding-left: 5%;
-  padding-bottom: 3%;
-  text-align: left;
-  color:rgb(140,140,160);
-  border: 1px solid black;
-}
-body{
-  font-size: 4vw;
-}
-.ignore1{
-  width: 20%;
-  float: left;
-}
 /* for mobile*/
-@media only screen and (max-width: 900px) {
+@media all and (orientation:portrait){
+	.note{
+		visibility:hidden;}
+  .tag{
+
+  }
+
+}
+@media (max-width:767px) and (orientation:landscape){
   body {
-    font-size: 6vh;
+    font-size: 6vw;
   }
   .vCard{
     width:80%;
@@ -160,42 +132,76 @@ body{
     font-size: 80%;
   }
   .tag{
-    font-size: 60%;
+    font-size: 80%;
+    position: absolute;
     bottom:15%;
     right:-12%;
   }
-}
-
-
-/* for tablet*/
-@media only screen and (min-width:901px) and (max-width: 1200px) {
+ }
+@media (min-width:768px) and (max-width:1024px) and (orientation:landscape){
   body {
     font-size: 9vh;
     background-color: lightgreen;
   }
 
-.vCard{
+ .vCard{
   width:80%;
   height:40%;
   float:left;
-}
-.ignore1{
+ }
+ .ignore1{
   width:10%;
-}
-.note{
+ }
+ .note{
   padding-bottom: 0%;
   font-size: 90%;
-}
-.tag{
+ }
+ .tag{
   font-size: 60%;
   bottom:25%;
   right:-10%;
-}
+ }
 
 }
 
+@media (min-width:1025px) {
+  .vCard{
+    width:60%;
+    height:35%;
+    float:left;
+    min-height:100px;
+    border: 1px solid black;
+  }
+  .tag{
+    font-family: 'Amatic SC', cursive;
+    font-size:40%;
+    font-weight: bold;
+    position: absolute;
+    bottom:15%;
+    right:-5%;
+    transform:rotate(-90deg);
+    border: 1px solid black;
+  }
 
-/*for desktop- all bigger*/
+  /* ////////////////////////*/
+  .note{
+    font-family: 'Homemade Apple', cursive;
+    font-size:70%;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 3%;
+    text-align: left;
+    color:rgb(140,140,160);
+    border: 1px solid black;
+  }
+  body{
+    font-size: 4vw;
+  }
+  .ignore1{
+    width: 20%;
+    float: left;
+  }
+}
 
 
 
