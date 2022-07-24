@@ -34,7 +34,7 @@ a{
 
 .intro{
   font-family: 'Reenie Beanie', cursive;
-  color:#555555;
+  color:inherit;
 }
 .rugged{
   font-family: 'Special Elite', cursive;
@@ -70,7 +70,10 @@ a{
 /* inside mid*/
 .top{
   height: 33%;
-  visibility: hidden;
+  color:#fff;
+}
+.top:hover{
+  color:#555555;
 }
 .btn{
   height: 33%;
@@ -142,7 +145,6 @@ a{
 @media (max-width:767px) and (orientation:landscape){
   body {
     font-size: 6vw;
-    background-color: LightGreen;
   }
   .vCard{
     width:80%;
@@ -176,10 +178,10 @@ a{
     transform:rotate(-90deg);
   }
  }
+/* tablets*/
 @media (min-width:768px) and (max-width:1024px) and (orientation:landscape){
   body {
     font-size: 5vw;
-    background-color: lightgreen;
   }
 
  .vCard{
@@ -210,7 +212,7 @@ a{
  }
 
 }
-
+/*pcs*/
 @media (min-width:1025px) {
   body {
     font-size: 4vw;
@@ -251,19 +253,19 @@ a{
 </head>
 
 <body>
-    <div class="ignore spacing" style="border:1px solid black;height:100%;">
+    <div class="ignore spacing">
        <p class="note"> For your story to tell,</p>
         </br>
         <div class="ignore1"></br></div>
-        <div class="vCard" style="border:1px solid black;">
+        <div class="vCard">
           <div class="ignore left null"></br></div>
           <div class="mid">
                <div class="top">
-                      <span style="position: relative;top:97%;left:-37.65%;" class="material-symbols-outlined">keyboard_tab</span>
+                      <span style="position: relative;top:97%;left:-37.65%;color:inherit;" class="material-symbols-outlined">keyboard_tab</span>
                       <meh class="intro">From Tanmay,</meh>
-                      <span style="position: relative;top:97%;left:34.5%;" class="material-symbols-outlined">space_bar</span>
+                      <span style="position: relative;top:97%;left:34.5%;color:inherit;" class="material-symbols-outlined">space_bar</span>
                </div>
-               <div class="btn" style="border:1px solid black;">
+               <div class="btn">
                      <meh class="rugged">Tab Space</meh>
                      <meh class="bold"> Designers</meh></br>
                </div>
