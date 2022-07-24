@@ -1,289 +1,193 @@
-
-
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8, width=device-width, intial-scale=1.0" name="viewport">
-<title> Contact Us</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cinzel&family=Fredericka+the+Great&family=Homemade+
-Apple&family=Nothing+You+Could+Do&family=Poiret+One&family=Rampart+One&family=Reenie+Beanie&family=Shadows+Into+
-Light&family=Special+Elite&family=Staatliches&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
-<style>
-
-* {
-	margin: 0;
-	padding: 0;
-	/*background: #fff;*/
-	font:'Lucida Grande', Geneva, Arial, Verdana, sans-serif;
-  color:#555555;
-  box-sizing:border-box;
-	text-align:center;
-}
-
-meh{
-
-}
-
-a{
-  text-decoration: none;
-  font-size:40%;
-  text-align: left;
-}
-
-.intro{
-  font-family: 'Reenie Beanie', cursive;
-  color:inherit;
-}
-.rugged{
-  font-family: 'Special Elite', cursive;
-  font-size:90%;
-}
-.bold{
-  font-family: 'Staatliches', cursive;
-  font-size:90%;
-}
-.location{
-  font-family: 'Amatic SC', cursive;
-  font-size: 60%;
-  font-weight:200;
-  letter-spacing: 0.4em;
-}
-.line{
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 150%;
-  font-weight: 500;
-}
-/* responsive alignment */
-.left{
-  width:15%;
-  float:left;
-  height:100%;
-}
-.mid{
-  width:70%;
-  float:left;
-  height: 100%;
-}
-/*right = no need */
-/* inside mid*/
-.top{
-  height: 33%;
-  color:#fff;
-}
-.top:hover{
-  color:#555555;
-}
-.btn{
-  height: 33%;
-}
-.btm{
-  height:33%;
-  position:relative;
-  top:-15%;
-}
-/* inside bottom*/
-.leftin{
-  width:47%;
-  float:left;
-  position:relative;
-  top:40%;
-}
-.centr{
-  width:8%;
-  float:left;
-}
-.rightin{
-  width:45%;
-  float:left;
-  position:relative;
-  top:50%;
-}
-
-/* for mobile*/
-@media all and (orientation:portrait){
-  body{
-    font-size: 9vh;
+  <style>
+  .code{
+    background: none repeat scroll 0 0 #2a2a2a;
+    color:#33b3ff ; 
+    padding: 1.3333em;
+    margin: 1.333em 0;
+    border: solid #ff3333;
+    border-width:.1em .1em .1em .8em;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 15px;
+    white-space: pre;
+    word-wrap: normal;
+    overflow-x: auto;
   }
-	.note{
-    visibility: hidden;
-    font-size:80%;
+  .side{
+    background:#9933ff;
+    width:15%;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
   }
-  .centr{
-    visibility: hidden;
+  .cent{
+    width:70%;
+    /*background:#ff4d79;*/
+    border: 5px dashed black;
+    border-radius: 10px;
+    color: black;
   }
-  .location{
-    visibility: hidden;
+  p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align:justify;
   }
-  .rightin{
-    width: 60%;
-  }
-  .top{
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-  }
-  .tag{
-    font-family: 'Amatic SC', cursive;
-    font-size:40%;
-    font-weight: bold;
-    position: absolute;
-    bottom:2%;
-    left:22.5%;
-  }
-  .vCard{
-    width:80%;
-    height: 40%;
-    float:left;
-  }
-  .ignore1{
-    width:10%;
-    float:left;
-  }
-
-}
-@media (max-width:767px) and (orientation:landscape){
-  body {
-    font-size: 6vw;
-  }
-  .vCard{
-    width:80%;
-    height:40%;
-    float:left;
-  }
-  .ignore1{
-    width:10%;
-    float:left;
-  }
-  .top{
-    font-size: 0;
-    visibility: hidden;
-  }
-  .note{
-    font-family: 'Homemade Apple', cursive;
-    font-size:80%;
-    padding: 2% 5% 0%;
-    text-align: left;
-    color:rgb(140,140,160);
-  }
-  .intro{
-    border: 1px solid black;
-    font-size: 80%;
-  }
-  .tag{
-    font-family: 'Amatic SC', cursive;
-    font-size: 80%;
-    position: absolute;
-    bottom:32%;
-    right:-17%;
-    transform:rotate(-90deg);
-  }
- }
-/* tablets*/
-@media (min-width:768px) and (max-width:1024px) and (orientation:landscape){
-  body {
-    font-size: 5vw;
-  }
-
- .vCard{
-  width:80%;
-  height:50%;
-  float:left;
- }
- .ignore1{
-  width:20%;
-  float:left;
- }
- .note{
-   font-family: 'Homemade Apple', cursive;
-   font-size:90%;
-   padding: 2% 5% 5%;
-   text-align: left;
-   color:rgb(140,140,160);
-
- }
- .tag{
-  font-family: 'Amatic SC', cursive;
-  font-size:60%;
-  font-weight: bold;
-  position: absolute;
-  bottom:25%;
-  right:-10%;
-  transform:rotate(-90deg);
- }
- .top{
-   visibility: hidden;
- }
-
-}
-/*pcs*/
-@media (min-width:1025px) {
-  body {
-    font-size: 4vw;
-  }
-  .vCard{
-    width:60%;
-    height:35%;
-    float:left;
-    min-height:100px;
-  }
-  .tag{
-    font-family: 'Amatic SC', cursive;
-    font-size:40%;
-    font-weight: bold;
-    position: absolute;
-    bottom:15%;
-    right:-4%;
-    transform:rotate(-90deg);
-  }
-
-  /* ////////////////////////*/
-  .note{
-    font-family: 'Homemade Apple', cursive;
-    font-size:70%;
-    padding: 2% 5% 0%;
-    text-align: left;
-    color:rgb(140,140,160);
-  }
-  .ignore1{
-    width: 20%;
-    float: left;
-  }
-}
-
-
-
-</style>
+  </style>
 </head>
+<body style="background:#63e98f;">
+  <h1 align="center"> Personal Documentation </h1>
+  <div style="display:flex;">
+  <div class="side">
+  <p>
+    <caption>For Linux </caption>
+    <ul>
+    <li> <a style="color:white;" href="">Cross-Platform Building - Python</a> </li>
+    <li> <a style="color:white;" href="">Personalization</a> </li>
+    <li> <a style="color:white;" href="">sample</a> </li>
+    <li> <a style="color:white;" href="">sample</a> </li>
+    <li> <a style="color:white;" href="">sample</a> </li>
+    </ul>
+  </p>
+  </div>
+  <div class="cent">
+    <h1 align="center"> Cross-Platform Building for Python files on Linux </h1>
+    <p>
+      ==================================================================<br>
+        python version: python3.6.9<br>
+        pyinstaller versin:<br>
+        linux version:<br>
+        wine version:<br>
+      ==================================================================<br><br>
 
-<body>
-    <div class="ignore spacing">
-       <p class="note"> For your story to tell,</p>
-        </br>
-        <div class="ignore1"></br></div>
-        <div class="vCard">
-          <div class="ignore left null"></br></div>
-          <div class="mid">
-               <div class="top">
-                      <span alt="" style="position: relative;top:97%;left:-37.65%;color:inherit;" class="material-symbols-outlined">keyboard_tab</span>
-                      <meh class="intro">From Tanmay,</meh>
-                      <span alt="" style="position: relative;top:97%;left:34.5%;color:inherit;" class="material-symbols-outlined">space_bar</span>
-               </div>
-               <div class="btn">
-                     <meh class="rugged">Tab Space</meh>
-                     <meh class="bold"> Designers</meh></br>
-               </div>
-               <div class="btm">
-                      <div class="leftin">
-                            <div class="ignore null" style="width:46%;float:left;"></br></div>
-                            <meh class="location" style="float:left;">INDIA</meh>
-                      </div>
-                      <div class="centr"><meh class="line">| </meh></div>
-                      <a class="rightin" href="mailto:info@thetabspace.org">info@thetabspace.org</a>
-               </div>
-          </div>
-    </div>
-<pre class="tag">A    Private   Limited    Entity</pre>
+        To Pack a single independant file that can be executed on either windows/linux
+        for your python script while running a linux OS follow the steps below.<br>
 
-</body></html>
+        The computer running the executable does not need to have any version of python
+        installed on it.<br>
+
+        This is facilitated by a python package called "pyinstaller".
+        Let's install that on your Linux OS first.<br>
+      </p>
+    <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> pip3 install pyinstaller</pre>
+      <p>
+        once installed, change current directory to the location of the python file. Here my "__test__.py" file is located in ~/testFolder.<br>
+        and enter the following command to generate the package.
+      </p>
+    <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~/testFolder$</span> pyinstaller --onefile _filename_.py</pre>
+
+    <p>
+       The package is strored in a sub-folder named "dist" with the same name as the file.
+       for linux there is no extension (binary package)
+       for windows the extension is .exe.<br>
+
+       Remember: This only packages a python script and not the dependant files (such as images, fonts, audios, etc)
+       you need to copy them manually into the "dist" folder.
+       click on the executable & viola! It runs...<br><br>
+
+      Say now, that you are using Ubunbtu (and not Windows, for obvious reasons!)
+      and you'd like to run your script on a windows based system then you need to
+      build an .exe file in ubuntu. Pyinstaller does not allow Cross-Platform bulding, so
+      we need to mimic a windows machine on your linux and build the package locally on it.
+      You can do that using "Wine". The recursive backronym for which is "Wine Is Not an Emulator"<br>
+      Hahahah... Pretty smart, right?<br><br>
+
+      It's installation is a bit tricky and the reason for this blog.
+      The official instructions can be found <a href="https://wiki.winehq.org/Download">here</a>.<br>
+      You'll need to know your system specific details such as Ubuntu version and architecture. Mine are shown below<br>
+      The commands for that are:
+    </p>
+
+<pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> lsb_release -a
+<span style="color:#888888;">2</span> Distributor ID: Ubuntu
+<span style="color:#888888;">3</span> Description: Ubuntu 18.04.4 LTS
+<span style="color:#888888;">4</span> Release: 18.04
+<span style="color:#888888;">5</span> Codename: bionic</pre>
+
+<p>
+  and for your system architecture:
+</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg --print-architecture
+<span style="color:#888888;">2</span> amd64</pre>
+
+<p>
+  Most systems these days are 64-bit systems and "wine" is made for 32-bit
+  architectures.<br>
+  If the output is 'amd64' then you have a 64-bit architecture.
+  So, you'll need to enable the 32-bit architecture for your OS.
+  ( Dont worry, you wont lose fucntionality. It'll only add and extra feature.
+  I too was worried and read about it <a href="https://askubuntu.com/questions/446350/what-are-the-biggest-disadvantages-of-using-a-64bit-version-of-linux-over-a-32bi">here</a>.)<br><br>
+  to see the other architectures enabled:
+</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg --print-foreign-architectures
+<span style="color:#888888;">2</span> i386</pre>
+<p>
+
+  If enabled it will give an output (above). <br>
+  Else nothing will be displayed (below).
+</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg --print-foreign-architectures
+<span style="color:#888888;">2</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span></pre>
+<p>
+  To enable multi-arch support:
+</p>
+
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg --add-architecture i386
+<span style="color:#888888;">2</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-get update
+<span style="color:#888888;">3</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-get dist-upgrade</pre>
+<p>
+  This will take time to process.<br>
+  Just put on some music or something...<br><br>
+  Once done open <a href="https://wiki.winehq.org/Ubuntu">official</a> instructions page.
+
+  The latest Wine depends on libfaudio0, that can be found <a href="https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/">here</a>.
+  Ubuntu versions prior to 19.10 don't include it in the standard repositories.
+  It is explained <a href="https://askubuntu.com/questions/1100351/broken-packages-fix-problem-for-wine">here</a>.<br>
+  To download them enter the below lines.
+</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/amd64/libfaudio0_19.07-0~bionic_amd64.deb
+<span style="color:#888888;">2</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/i386/libfaudio0_19.07-0~bionic_i386.deb
+<span style="color:#888888;">3</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo dpkg -i libfaudio0_19.07-0~bionic_amd64.deb libfaudio0_19.07-0~bionic_i386.deb</pre>
+<p>Then install the package as shown below</p>
+<pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> wget -nc https://dl.winehq.org/wine-builds/Release.key
+<span style="color:#888888;">2</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-key add Release.key
+<span style="color:#888888;">3</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+<span style="color:#888888;">4</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> apt-get update
+<span style="color:#888888;">5</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span> sudo apt-get install --install-recommends winehq-stable</pre>
+<p>You can verify your installation as shown below</p>
+  <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span>cd ~/.wine/drive_c</pre>
+<p>
+   this should install it. if it fails add the key again and repeat the last 3 steps.
+   it worked for me.<br>
+
+   Wine would resemble your generic windows C:/ drive.
+   we have to install python here. Whatever version you want to use.<br>
+
+   There are many methods to do this but the easiest if found was to download
+   the python package for Windows ad copy that onto the virtual wine C:/ drive.
+   ie. copy the python3 folder located likewise C:\python3 to ~/.wine/drive_c/
+   and with that you have a python up and running on your virtual machine.<br>
+ </p>
+   <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~$</span>cd ~/.wine/drive_c/Python36</pre>
+<p>Next, we install pyinstaller for python on that virtual machine.</p>
+   <pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~/wine/drive_c/Python36$</span> wine python.exe Scripts/pip.exe install pyinstaller
+<span style="color:#888888;">2</span> Successfully installed pyinstaller-3.1.1 pypiwin32-219</pre>
+<p>
+  <a href="http://sparkandshine.net/en/build-a-windows-executable-from-python-scripts-on-linux/">Here</a> is a similar method used.<br>
+  Your Cross-Platform Builder is now set up.<br>
+
+  To build an .exe file from your Linux OS.
+  Navigate to the folder location of your python script on linux and run the pyinstall command on the wine virtual machine, as shown below.
+</p>
+<pre class="code"><span style="color:#888888;">1</span><span style="color:#00ff00;"> user@ubuntu</span><span style="color:#8a2be2;">:~/testFolder$</span> wine ~/.wine/drive_c/Python36/Scripts/pyinstaller.exe --onefile _filename_.py</pre>
+<p>
+  and this will generate an .exe file into the "dist" sub-folder.
+  As before, copy all the dependant files into the dist folder and you have an independant distribution package for your script.
+</p>
+  </div>
+  <div class="side">
+  </div>
+</div>
+</body>
+</html>
