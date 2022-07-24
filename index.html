@@ -111,7 +111,16 @@ a{
 	.note{
 		visibility:hidden;}
   .tag{
+    font-family: 'Amatic SC', cursive;
+    font-size:20%;
+    font-weight: bold;
+    position: absolute;
+    bottom:2%;
+    right:0%;
 
+  }
+  .body{
+    background-color: dodgerblue;
   }
 
 }
@@ -132,10 +141,12 @@ a{
     font-size: 80%;
   }
   .tag{
+    font-family: 'Amatic SC', cursive;
     font-size: 80%;
     position: absolute;
     bottom:15%;
     right:-12%;
+    transform:rotate(-90deg);
   }
  }
 @media (min-width:768px) and (max-width:1024px) and (orientation:landscape){
@@ -146,25 +157,32 @@ a{
 
  .vCard{
   width:80%;
-  height:40%;
+  height:50%;
   float:left;
  }
  .ignore1{
-  width:10%;
+  width:20%;
  }
  .note{
-  padding-bottom: 0%;
+  padding-bottom: 5%;
   font-size: 90%;
  }
  .tag{
-  font-size: 60%;
+  font-family: 'Amatic SC', cursive;
+  font-size:60%;
+  font-weight: bold;
+  position: absolute;
   bottom:25%;
   right:-10%;
+  transform:rotate(-90deg);
  }
 
 }
 
 @media (min-width:1025px) {
+  body {
+    font-size: 4vw;
+  }
   .vCard{
     width:60%;
     height:35%;
@@ -193,9 +211,6 @@ a{
     text-align: left;
     color:rgb(140,140,160);
     border: 1px solid black;
-  }
-  body{
-    font-size: 4vw;
   }
   .ignore1{
     width: 20%;
