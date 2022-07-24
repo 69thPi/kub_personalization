@@ -1,130 +1,232 @@
+
+
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> Contact Us</title>
-  <style>
-html,body {
-	margin: 0;
-	padding: 0;
-	background: #fff;
-	font:'Lucida Grande', Geneva, Arial, Verdana, sans-serif;
-	color: #555555;
-	text-align:center;
-}
-a:link{
-	color: #555555;
-	text-decoration:none;
-}
-a:hover{
-  color: #555555;
-  text-decoration:none;
-}
-a:active{
-	color: #555555;
-	text-decoration:none;
-  transform: translateY(2px);
-}
-
-meh{
-  padding: 1px;
-}
-
-.line{font-family: 'Fredericka the Great', cursive;
-font-size: 150%;
-padding:0px;
-margin:0px;
-font-weight: 500;
-position:absolute;
-top:43%;
-left:49.7%;}
-
-.note{font-family: 'Homemade Apple', cursive;
-font-size:70%;
-padding-top: 2%;
-padding-left: 5%;
-text-align: left;
-color:rgb(140,140,160);}
-
-
-.intro{
-  font-family: 'Reenie Beanie', cursive;
-color:#fff;
-}
-
- .intro:hover{
-   color:#555555;
- }
-
-.rugged{font-family: 'Special Elite', cursive;
-font-size:90%;}
-.bold{font-family: 'Staatliches', cursive;
-font-size:90%;}
-
-
-.location{font-family: 'Amatic SC', cursive;
-font-size: 60%;
-border:1px solid black
-font-weight:200;
-position:absolute;
-top:46.5%;
-left:38.5%;
-letter-spacing: 0.4em;
-}
-.tag{
-  font-family: 'Amatic SC', cursive;
-  font-size:40%;
-  font-weight: bold;
-  position: absolute;
-  bottom:11%;
-  right:-5%;
-  transform:rotate(-90deg);
-}
-.mail{
-  font-size:40%;
-  position:absolute;
-  top:48%;
-  left:52%;
-}
-
-</style>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cinzel&family=Fredericka+the+Great&family=Homemade+
 Apple&family=Nothing+You+Could+Do&family=Poiret+One&family=Rampart+One&family=Reenie+Beanie&family=Shadows+Into+
 Light&family=Special+Elite&family=Staatliches&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+<style>
+
+* {
+	margin: 0;
+	padding: 0;
+	/*background: #fff;*/
+	font:'Lucida Grande', Geneva, Arial, Verdana, sans-serif;
+  color:#555555;
+  box-sizing:border-box;
+	text-align:center;
+}
+
+meh{
+
+}
+
+a{
+  text-decoration: none;
+  font-size:40%;
+  text-align: left;
+}
+
+.intro{
+  font-family: 'Reenie Beanie', cursive;
+  color:#555555;
+}
+.rugged{
+  font-family: 'Special Elite', cursive;
+  font-size:90%;
+}
+.bold{
+  font-family: 'Staatliches', cursive;
+  font-size:90%;
+}
+.location{
+  font-family: 'Amatic SC', cursive;
+  font-size: 60%;
+  font-weight:200;
+  letter-spacing: 0.4em;
+}
+.line{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 150%;
+  font-weight: 500;
+}
+/* responsive alignment */
+.left{
+  width:15%;
+  float:left;
+  height:100%;
+  border: 1px solid black;
+}
+.mid{
+  width:70%;
+  float:left;
+  height: 100%;
+  border: 1px solid black;
+}
+/*right = no need */
+/* inside mid*/
+.top{
+  height: 33%;
+  border: 1px solid black;
+}
+.btn{
+  height: 33%;
+  border: 1px solid black;
+}
+.btm{
+  height:33%;
+  position:relative;
+  top:-15%;
+  border: 1px solid black;
+}
+/* inside bottom*/
+.leftin{
+  width:47%;
+  float:left;
+  position:relative;
+  top:40%;
+  border: 1px solid black;
+}
+.centr{
+  width:8%;
+  float:left;
+  border: 1px solid black;
+}
+.rightin{
+  width:45%;
+  float:left;
+  position:relative;
+  top:50%;
+  border: 1px solid black;
+}
+
+.vCard{
+  width:60%;
+  height:35%;
+  float:left;
+  min-height:100px;
+  border: 1px solid black;
+}
+.tag{
+  font-family: 'Amatic SC', cursive;
+  font-size:40%;
+  font-weight: bold;
+  position: absolute;
+  bottom:15%;
+  right:-5%;
+  transform:rotate(-90deg);
+  border: 1px solid black;
+}
+
+/* ////////////////////////*/
+.note{
+  font-family: 'Homemade Apple', cursive;
+  font-size:70%;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-bottom: 3%;
+  text-align: left;
+  color:rgb(140,140,160);
+  border: 1px solid black;
+}
+body{
+  font-size: 4vw;
+}
+.ignore1{
+  width: 20%;
+  float: left;
+}
+/* for mobile*/
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 6vh;
+  }
+  .vCard{
+    width:80%;
+    height:40%;
+    float:left;
+  }
+  .ignore1{
+    width:10%;
+  }
+  .note{
+    padding-bottom: 10%;
+    font-size: 80%;
+  }
+  .tag{
+    font-size: 60%;
+    bottom:15%;
+    right:-12%;
+  }
+}
+
+
+/* for tablet*/
+@media only screen and (min-width:601px) and (max-width: 900px) {
+  body {
+    font-size: 10vh;
+  }
+
+.vCard{
+  width:80%;
+  height:40%;
+  float:left;
+}
+.ignore1{
+  width:10%;
+}
+.note{
+  padding-bottom: 0%;
+  font-size: 80%;
+}
+.tag{
+  font-size: 60%;
+  bottom:25%;
+  right:-10%;
+}
+
+}
+
+
+/*for desktop- all bigger*/
+
+
+
+</style>
 </head>
 
-<body style="font-size:350%;">
-
-  <div class="note"> For your story to tell,
-  </div>
-</br>
-
-<div style="width:50%;margin-left:25%;">
-  <div class="intro">
-    <meh>From Tanmay,</meh>
-    <span class="material-symbols-outlined" style="position:absolute; top:44%;left:25%;">
-    keyboard_tab</span>
-    <span class="material-symbols-outlined" style="position:absolute; top:44%; right:25%;">
-    space_bar</span>
-</div>
-  <meh class="rugged">Tab Space</meh>
-  <meh class="bold"> Designers</meh></br>
-  <meh class="location">INDIA</meh>
-  <meh class="line">| </meh>
-</div>
-
+<body>
+    <div class="ignore spacing">
+       <p class="note"> For your story to tell,</p>
+     </br>
+        <div class="ignore1"></br></div>
+        <div class="vCard">
+          <div class="ignore left null"></br></div>
+          <div class="mid">
+               <div class="top">
+                      <span style="position: relative;top:97%;left:-37.65%;" class="material-symbols-outlined">keyboard_tab</span>
+                      <meh class="intro">From Tanmay,</meh>
+                      <span style="position: relative;top:97%;left:34.5%;" class="material-symbols-outlined">space_bar</span>
+               </div>
+               <div class="btn">
+                     <meh class="rugged">Tab Space</meh>
+                     <meh class="bold"> Designers</meh></br>
+               </div>
+               <div class="btm">
+                      <div class="leftin">
+                            <div class="ignore null" style="width:46%;float:left;"></br></div>
+                            <meh class="location" style="float:left;">INDIA</meh>
+                      </div>
+                      <div class="centr"><meh class="line">| </meh></div>
+                      <a class="rightin" href="mailto:info@thetabspace.org">info@thetabspace.org</a>
+               </div>
+          </div>
+    </div>
 <pre class="tag">A    Private   Limited    Entity</pre>
-
-
-<a class="mail" href="mailto:info@thetabspace.org">info@thetabspace.org</a>
-  <div>
-
-  </div>
-
-
-</div>
 
 </body></html>
